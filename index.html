@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book A Bike</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bookabike.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<!-- Diaporama -->
+			<div class="containerFigure" >
+				<figure class="image">
+					<img src="images/image1.png">
+				</figure>
+
+				<figure class="image">
+					<img src="images/image2.png">
+				</figure>
+
+				<figure class="image">
+					<img src="images/image3.png">
+				</figure>
+
+				<figure class="image">
+					<img src="images/image4.png">
+				</figure>
+
+				<figure class="image">
+					<img src="images/image5.png">
+				</figure>
+				<div class="buttonDisplay"></div>
+			</div>
+		</header>
+
+		<section class="row displayMapInfo">
+			<div class="mapDisplay">
+				<div id="mapid"></div>
+			
+				<div id="stationDetails">
+					<h1>Details of the station :</h1>
+					<div id="infoStation">
+						<p>Please select one station to Book A Bike.</p>
+					</div>
+
+					<form>
+						<label for="surname">First name :</label>
+						<input type="text" name="surname" id="surname" required>
+
+						<label for="name">Name :</label>
+						<input type="text" name="name" id="name" required>
+						<br>
+						<input id="buttonSend" type="submit" value="Booking">			
+					</form>
+
+					<canvas id="canvas" width="180" height="90"></canvas>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="bookedDetails">
+				<div id="infoBooked"></div>
+				<div id='timer'></div>
+			</div>
+		</footer>
+
+
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/ajax.js"></script>
+   		<script src="js/slider.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/map.js"></script>
+   		<script src="js/app.js"></script>
+	</div>
+</body>
+</html>

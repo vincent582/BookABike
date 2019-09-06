@@ -1,0 +1,237 @@
+/*************************************************
+**************************************************
+*****************   SOMMAIRE   *******************
+	1- $GENERAL CSS
+	2- $SLIDER
+	3- $MAP
+	4- $DETAILS-STATIONS
+	5- $MEDIA-QUERRY-425PX
+	6- $MEDIA-QUERRY-320PX
+**************************************************
+*************************************************/
+
+/***************************************************************************************************************
+****  $GENERAL CSS *********************************************************************************************
+***************************************************************************************************************/
+
+body
+{
+	/* background-image: linear-gradient(#042502, #086103,#042502); */
+}
+h1{
+	font-size: small !important;
+	color: darkblue !important;
+	margin-top: 0px !important;
+	margin-bottom: 5px !important;
+	text-align: center;
+}
+header
+{
+	display: flex !important;
+	flex-direction: column-reverse;
+	align-items: center;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+figure{
+	position: relative;
+}
+figcaption{
+	position: absolute;
+	top: 0px;
+	/* margin: 8px; */
+	padding: 27px;
+	font-size: xx-large;
+	font-weight: bold;
+	font-family: cursive;
+	color: #ffffff;
+	text-shadow: -1px -3px 1px #9C27B0;
+}
+
+input 
+{
+    border-radius: 5px;
+    padding: 3px;
+    color: black !important;
+    width: 100%;
+    border: 2px solid #afafaf;
+}
+canvas#canvas 
+{
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    top: 10px;
+    border: #1C7679 6px solid;
+}
+
+footer {
+    justify-content: center;
+    display: flex !important;
+    margin-top: 10px;
+}
+
+
+
+/***************************************************************************************************************
+******  $SLIDER ************************************************************************************************
+***************************************************************************************************************/
+.containerFigure{
+	width: 60%;
+}
+figure img{
+	width: 100%;
+	height: 200px;
+	margin-bottom: 4px;
+}
+figcaption p{text-align: center;font-family: sans-serif;}
+.buttonDisplay {
+    width: 100%;
+    text-align: center;
+}
+button {
+	width: 25%;
+	color: black !important;
+}
+button:hover{
+    background-color: #b1a7a7;
+    color: #00008a !important;
+}
+
+
+/**************************************************************************************************************
+******  $MAP **************************************************************************************************
+***************************************************************************************************************/
+#mapid 
+{
+	height: 300px;
+	border: 2px solid black;
+	width: 72%;
+}
+
+.mapDisplay{
+	display: flex;
+	justify-content: center;
+	padding: 0%;
+	width: 59%;
+}
+
+.displayMapInfo{
+    display: flex;
+    justify-content: center;
+}
+/**************************************************************************************************************
+** $DETAILS-STATIONS ******************************************************************************************
+***************************************************************************************************************/
+#stationDetails
+{
+	color: white;
+	/* position: relative; */
+	display: flex;
+	text-align: -webkit-center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 3px;
+	background-image: linear-gradient(50deg, #5b800b 0%, #8cb902 7%, #698e1b 30%,#5b800b 63% ,#86a545 95%,#5b800b 100%);
+	height: 300px;
+	margin-left: 20px;
+	/* width: 28%; */
+	border: black;
+}
+label {
+    display: block !important;
+    font-weight: 450 !important;
+    font-size: small;
+    font-style: italic;
+}
+input#buttonSend{
+	margin: 3px;
+	margin-left: 0px;
+	text-align: center;
+	padding: 5px;
+}
+input#buttonSend:hover{
+	background-color: #b1a7a7;
+}
+#infoStation p{
+	/* text-align: center; */
+	font-size: smaller;
+	width: 70%;
+}
+
+.bookedDetails
+{
+	background-image: linear-gradient(50deg, #5b800b 0%, #688b1f 7%, #5b800b 30%,#405d02 63% ,#476508 95%,#b2ff0c 100%);
+	color: white;
+	padding: 15px;
+	text-align: center;
+	width: 60%;
+}
+
+/****************************************************************************************************************
+** $MEDIA-QUERRY-768PX ******************************************************************************************
+****************************************************************************************************************/
+
+@media all and (max-width: 768px)
+{
+	.containerFigure {
+		width: 75%;
+	}
+	.mapDisplay {
+		width: 72%;
+	}
+	.bookedDetails {
+		width: 75%;
+	}
+	
+}
+
+/**************************************************************************************************************
+** $MEDIA-QUERRY-425PX ******************************************************************************************
+***************************************************************************************************************/
+
+@media all and (max-width: 425px)
+{
+	.mapDisplay {
+		flex-direction: column;
+	}
+	#mapid {
+		height: 200px;
+		border: 2px solid black;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#stationDetails{
+		margin-left: 0px;
+	}
+
+}
+
+/****************************************************************************************************************
+** $MEDIA-QUERRY-375PX ******************************************************************************************
+****************************************************************************************************************/
+
+@media all and (max-width: 375px)
+{
+	.bookedDetails {
+		width: 78%;
+	}
+	
+}
+
+/****************************************************************************************************************
+** $MEDIA-QUERRY-320PX ******************************************************************************************
+****************************************************************************************************************/
+
+@media all and (max-width: 320px)
+{
+	.bookedDetails {
+		width: 80%;
+	}
+
+	.containerFigure {
+		width: 90%;
+	}
+	
+}
